@@ -1,0 +1,42 @@
+{
+ "Version": 3,
+ "Parameters": [
+  {
+   "Id": "ParamAngleZ",
+   "GroupId": "",
+   "Name": "ParamAngleZ"
+  },
+  {
+   "Id": "ParamEyeLOpen",
+   "GroupId": "",
+   "Name": "ParamEyeLOpen"
+  },
+  {
+   "Id": "ParamEyeROpen",
+   "GroupId": "",
+   "Name": "ParamEyeROpen"
+  },
+  {
+   "Id": "ParamMouthOpenY",
+   "GroupId": "",
+   "Name": "ParamMouthOpenY"
+  },
+  {
+   "Id": "ParamBreath",
+   "GroupId": "",
+   "Name": "ParamBreath"
+  },
+  {
+   "Id": "ParamBodySway",
+   "GroupId": "",
+   "Name": "ParamBodySway"
+  },
+  {
+   "Id": "ParamHairSwing",
+   "GroupId": "",
+   "Name": "ParamHairSwing"
+  }
+ ],
+ "ParameterGroups": [],
+ "Parts": []
+}

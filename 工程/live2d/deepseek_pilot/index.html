@@ -1,0 +1,15 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>DeepSeek 娘 · Live2D 试点</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#1d2740;color:#eef3fb;font:14px system-ui}header{padding:14px 20px}h1{font-size:20px;margin:0 0 4px}p{color:#b9c6dc;margin:4px 0}main{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 20px}article{background:#2b3a57;border-radius:10px;overflow:hidden}h2{font-size:14px;margin:8px 14px}.view{height:74vh;position:relative}.view img{width:100%;height:100%;object-fit:contain}canvas{position:absolute;inset:0}footer{display:flex;flex-wrap:wrap;gap:10px 20px;padding:14px 20px}footer label{flex:1 1 22%;min-width:180px}footer input{width:100%;accent-color:#9cc3ff}button{border:1px solid #5b77a0;border-radius:8px;background:#3a5274;color:#fff;padding:8px 14px;cursor:pointer}#status{color:#9fe3c6}</style>
+<header><h1>DeepSeek 娘 · Live2D 试点（代码直接生成 MOC3，未用 Cubism Editor）</h1><p>左：原图　右：真实 Cubism Core 5.1 渲染的 MOC3。已做：眨眼（双眼独立）、嘴巴开合（音量口型用）、头部侧倾、呼吸、身体重心、长发 + 鲸尾摆动。</p><p id="status">加载中…</p></header>
+<main><article><h2>原图</h2><div class="view"><img src="Reference.png"></div></article><article><h2>Live2D</h2><div class="view" id="stage"><canvas></canvas></div></article></main>
+<footer>
+<label>头部侧倾 <input id="ParamAngleZ" type="range" min="-10" max="10" step=".1" value="0"></label>
+<label>左眼开合 <input id="ParamEyeLOpen" type="range" min="0" max="1" step=".01" value="1"></label>
+<label>右眼开合 <input id="ParamEyeROpen" type="range" min="0" max="1" step=".01" value="1"></label>
+<label>嘴巴开合 <input id="ParamMouthOpenY" type="range" min="0" max="1" step=".01" value="1"></label>
+<label>呼吸 <input id="ParamBreath" type="range" min="0" max="1" step=".01" value="0"></label>
+<label>身体重心 <input id="ParamBodySway" type="range" min="-1" max="1" step=".01" value="0"></label>
+<label>头发 / 鲸尾 <input id="ParamHairSwing" type="range" min="-1" max="1" step=".01" value="0"></label>
+<div><button id="idle">播放待机</button> <button id="talk">模拟说话</button> <button id="reset">恢复原图姿态</button></div>
+</footer>
+<script src="vendor/live2dcubismcore.min.js"></script><script src="vendor/pixi.min.js"></script><script src="vendor/cubism4.min.js"></script><script src="preview.js"></script></html>

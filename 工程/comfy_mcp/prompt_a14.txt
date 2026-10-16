@@ -1,0 +1,7 @@
+For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
+
+integrated_multimodal_description: [Shot 1] Anime illustration style, clean cel shading, a cozy bedroom at night. The purple-haired girl shown in <Picture 1> stands in the center, preserving her side ponytail, white and blue outfit, ID badge, the round plush head held in her left arm, and her raised right hand. Behind her, a warm desk lamp glows on the left and a window with a full moon and city lights sits on the right, softly blurred. She lowers her raised hand, looks straight into the camera with a calm, matter-of-fact smile, and the bright, clear young woman (S1) says slowly and flatly: <d>[Chinese] 我用最直白、最直接、最不绕弯子的方式告诉你：别等了，睡吧。</d> She pauses, tilts her head slightly, then lifts her right hand again and gives a small goodnight wave. Her hair sways gently and she blinks naturally. The camera dollies back with small amplitude at slow speed, and the lamp light dims slightly by the end. No on-screen text.
+
+overall_soundscape: Quiet room tone with a faint clock ticking and soft distant city ambience; her voice is close and clear.
+
+non_diegetic_music: N/A

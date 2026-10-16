@@ -1,0 +1,40 @@
+{
+ "canvas": [
+  867,
+  1569
+ ],
+ "layers": [
+  {
+   "name": "Body",
+   "texture": "Reference.png",
+   "x": 0,
+   "y": 0,
+   "w": 867,
+   "h": 1569
+  },
+  {
+   "name": "EyeClosedLeft",
+   "texture": "layers/EyeClosedLeft.png",
+   "x": 334,
+   "y": 188,
+   "w": 62,
+   "h": 52
+  },
+  {
+   "name": "EyeClosedRight",
+   "texture": "layers/EyeClosedRight.png",
+   "x": 424,
+   "y": 162,
+   "w": 64,
+   "h": 50
+  },
+  {
+   "name": "MouthClosed",
+   "texture": "layers/MouthClosed.png",
+   "x": 392,
+   "y": 232,
+   "w": 54,
+   "h": 44
+  }
+ ]
+}

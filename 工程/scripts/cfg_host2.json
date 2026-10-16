@@ -1,0 +1,38 @@
+{
+ "W": 1920,
+ "H": 1080,
+ "images": {
+  "ds": "D:/DeepSeek Harness WorkSpace/国模 江湖之间/Ai娘图片/DeepSeek.png",
+  "gpt": "D:/DeepSeek Harness WorkSpace/国模 江湖之间/Ai娘图片/GPT.jpg",
+  "claude": "D:/DeepSeek Harness WorkSpace/国模 江湖之间/Ai娘图片/Claude.jpg",
+  "qwen": "D:/DeepSeek Harness WorkSpace/国模 江湖之间/Ai娘图片/Qwen.jpg",
+  "glm": "D:/DeepSeek Harness WorkSpace/国模 江湖之间/Ai娘图片/GLM 2.png",
+  "kimi": "D:/DeepSeek Harness WorkSpace/国模 江湖之间/Ai娘图片/KIMI.png",
+  "seed": "D:/DeepSeek Harness WorkSpace/国模 江湖之间/Ai娘图片/Seed (豆包).jpg"
+ },
+ "font_lyric": "D:/DeepSeek Harness WorkSpace/国模 江湖之间/素材/字体/ZhiMangXing-Regular.ttf",
+ "font_label": "C:/Windows/Fonts/msyhbd.ttc",
+ "ffmpeg": "ffmpeg",
+ "audio": "D:/DeepSeek Harness WorkSpace/国模 江湖之间/音频/江湖之间.mp4",
+ "out": "D:/DeepSeek Harness WorkSpace/国模 江湖之间/素材/示例镜头/示例_{name}.mp4",
+ "outs": {
+  "act1": "D:/DeepSeek Harness WorkSpace/国模 江湖之间/素材/示例镜头/示例_03-08_第一幕后半.mp4",
+  "cards": "D:/DeepSeek Harness WorkSpace/国模 江湖之间/素材/示例镜头/示例_15_角色卡.mp4"
+ },
+ "still_dir": "D:/DeepSeek Harness WorkSpace/国模 江湖之间/素材/示例镜头/预览帧",
+ "crf": 16,
+ "stills": {
+  "act1": [
+   14.4,
+   20.5,
+   26.5,
+   31.5,
+   36.9,
+   38.0,
+   42.6
+  ],
+  "cards": [
+   70.2
+  ]
+ }
+}

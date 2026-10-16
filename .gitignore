@@ -1,0 +1,23 @@
+# —— 不上传：大文件 / 版权素材 / 中间产物 ——
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.mp3
+*.m4a
+*.prproj
+音频/
+导出/
+素材/外源视频/
+素材/示例镜头/
+工程/示例镜头/
+# 自己生成的 AI 镜头可以上传
+!素材/AI镜头/*.mp4
+node_modules/
+*.log
+*.err
+*.b64
+__pycache__/
+工程/mg/stills_host/
+工程/live2d/**/vendor/
+工程/live2d/**/shot_*.png

@@ -1,0 +1,14 @@
+[
+ {"id":"ds_reasoning","url":"https://api-docs.deepseek.com/guides/reasoning_model"},
+ {"id":"ds_price163","url":"https://www.163.com/dy/article/L485A7RT05198NMR.html"},
+ {"id":"bili_96h","url":"https://www.bilibili.com/video/BV1DMbv6REyC/","maxh":2400},
+ {"id":"ds41_toutiao","url":"https://www.toutiao.com/article/7685244100848779785/"},
+ {"id":"ds41_news","url":"https://api-docs.deepseek.com/zh-cn/news/news260910"},
+ {"id":"qwen27_aihub","url":"https://www.aihub.cn/news/qwen3-8-open-source/"},
+ {"id":"qwen27_hf","url":"https://huggingface.co/Qwen/Qwen3.8-27B"},
+ {"id":"qwen_orca","url":"https://www.orcarouter.ai/blog/qwen-3-8-flash-vs-qwen-3-8"},
+ {"id":"seed_jiemian","url":"https://www.jiemian.com/article/14629207.html"},
+ {"id":"seed_geekpark","url":"https://www.geekpark.net/news/362084"},
+ {"id":"doubao_sina","url":"https://www.sina.cn/news/detail/5298250246788056.html","w":480},
+ {"id":"doubao_linuxdo","url":"https://linux.do/t/topic/2209607"}
+]
