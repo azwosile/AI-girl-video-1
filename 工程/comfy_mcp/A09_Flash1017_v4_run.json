@@ -1,0 +1,18 @@
+{
+  "shot": "A09",
+  "revision": "v4",
+  "endpoint": "http://127.0.0.1:8188",
+  "client_id": "arena-a09-v4-981c6d12-cdd4-422a-9aa4-c8d08600449a",
+  "prompt_id": "99c6a3b5-3ce5-4687-803e-12bbf12e2d05",
+  "state": "running",
+  "submitted_at_local": "2026-10-17T15:12:55+0800",
+  "frame_name": "A09_Flash1017_v4_firstframe.png",
+  "workflow_sha256": "9a163b6a477012f2764cbb93a0adeaf42bad9efc020dfae1780d06f1b50bbc79",
+  "frame_sha256": "16a067759da454934efdc0c384f47e816759ea64099306f67866854fddbe5593",
+  "queue_before": {
+    "queue_running": 0,
+    "queue_pending": 0
+  },
+  "queue_number": 0,
+  "node_errors": {}
+}

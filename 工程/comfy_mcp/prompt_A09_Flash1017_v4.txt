@@ -1,0 +1,7 @@
+For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
+
+integrated_multimodal_description: [Shot 1] Anime illustration with clean cel shading, matching the exact character identity and composition of <Picture 1>. A young adult woman with long wavy blue hair, blue whale-fin ears, blue eyes, and the same navy and white maid outfit occupies the right side of a dim blue workstation scene. Preserve her face, hair color, ear silhouette, outfit, and placement. She begins with a subdued, slightly lowered gaze. After a brief still moment she lifts her eyes and her chin only a little toward the soft monitor glow on the left. She blinks naturally once, and her expression softens into a very small, closed-mouth, hopeful smile. Only the ends of her hair move gently. Cool blue-white monitor light grows slightly brighter across her face while the dark background stays unchanged. Locked-off camera with no reframing. One continuous restrained shot, no speech, no lip-sync, no hand gesture, no new props, no other characters, no sword, no action sequence, no readable text, no logos.
+
+overall_soundscape: N/A. Silent reaction shot, no dialogue or vocalization.
+
+non_diegetic_music: N/A

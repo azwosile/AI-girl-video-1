@@ -1,7 +1,8 @@
 from urllib.parse import quote
 from xml.sax.saxutils import escape
+from pathlib import Path
 FPS = 30
-P = 'D:/DeepSeek Harness WorkSpace/国模 江湖之间/'
+P = Path(__file__).resolve().parents[2].as_posix() + '/'  # 项目根目录
 def url(p): return 'file://localhost/' + quote(p, safe='/:')
 def fr(s): return int(round(s * FPS))
 RATE = f'<rate><timebase>{FPS}</timebase><ntsc>FALSE</ntsc></rate>'

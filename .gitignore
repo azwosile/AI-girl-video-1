@@ -21,3 +21,10 @@ __pycache__/
 工程/mg/stills_host/
 工程/live2d/**/vendor/
 工程/live2d/**/shot_*.png
+
+# 系统 / 编辑器杂项
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+*.tmp

@@ -9,6 +9,13 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance
 import cv2
 
 cfg = json.load(open(sys.argv[1], encoding='utf-8'))
+# 配置里的相对路径按 config 文件所在目录解析，仓库换位置也能直接跑
+_CFG_DIR = os.path.dirname(os.path.abspath(sys.argv[1]))
+def _abs(p): return p if (not isinstance(p, str) or os.path.isabs(p) or p == 'ffmpeg') else os.path.normpath(os.path.join(_CFG_DIR, p))
+for _k in ('font_lyric', 'font_label', 'audio', 'out', 'still_dir'):
+    if cfg.get(_k): cfg[_k] = _abs(cfg[_k])
+cfg['images'] = {k: _abs(v) for k, v in cfg.get('images', {}).items()}
+cfg['outs'] = {k: _abs(v) for k, v in cfg.get('outs', {}).items()}
 W, H, FPS = cfg.get('W', 1920), cfg.get('H', 1080), 30
 T0, T1 = 0.0, 11.2
 NF = int(round((T1 - T0) * FPS))

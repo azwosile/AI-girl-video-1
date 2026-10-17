@@ -1,0 +1,47 @@
+{
+  "mode": "post-production-only",
+  "regeneratedSource": false,
+  "containsExistingAIFootage": true,
+  "source": "D:\\DeepSeek Harness WorkSpace\\国模 江湖之间\\素材\\AI镜头\\arena_A09_Flash1017_v4_00001.mp4",
+  "sourceSha256": "293c1f0fb4c60ddd6a4e87d0ccd8fd751b020da7914058c3992cc9623df21ede",
+  "output": "D:\\DeepSeek Harness WorkSpace\\国模 江湖之间\\素材\\AI镜头\\A09_Flash1017_信息密度增强_v1.mp4",
+  "outputSha256": "69cd6331be766b8db38d0e6dfb88581454c9b1904e20dbbefe4bf85ab499d8a4",
+  "music": "D:\\DeepSeek Harness WorkSpace\\国模 江湖之间\\音频\\江湖之间.mp4",
+  "musicStart": 70.4,
+  "lyric": "忘不了惊鸿一眼",
+  "libraries": {
+    "anime": "3.2.1",
+    "lottie": "5.12.2"
+  },
+  "effects": {
+    "animatedCards": 7,
+    "archiveScreenshots": 3,
+    "lottiePaths": 6,
+    "masterAudioStart": 70.4,
+    "lyric": "忘不了惊鸿一眼"
+  },
+  "renderSeconds": 50.651,
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "3.000000",
+      "size": "4193059"
+    }
+  }
+}
