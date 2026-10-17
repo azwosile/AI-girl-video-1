@@ -171,6 +171,7 @@ body { font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'PingFang SC', sans-s
 </div>
 <script src="lib.js"></script>
 <script src="shots.js"></script>
+<script src="glass.js"></script><!-- 毛玻璃实验层：仅 ?glass=1 时启用 -->
 <script>
   window.DEMO = { width: 1920, height: 1080, fps: 30 };
   Promise.all([...document.images].map(i => i.complete ? 1 : new Promise(r => { i.onload = i.onerror = r; })))

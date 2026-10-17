@@ -16,7 +16,8 @@ const browser = await puppeteer.launch({ executablePath: CHROME, headless: 'new'
 const page = await browser.newPage();
 await page.setViewport({ width: 1920, height: 1080, deviceScaleFactor: scale });
 page.on('pageerror', (e) => console.log('[pageerror]', e.message));
-await page.goto(pathToFileURL(path.resolve('film.html')).href, { waitUntil: 'load', timeout: 120000 });
+const query = opt('query', ''); // 例：--query glass=1（实验层），默认不带参数 = v5 原样
+await page.goto(pathToFileURL(path.resolve('film.html')).href + (query ? '?' + query : ''), { waitUntil: 'load', timeout: 120000 });
 await page.waitForFunction('window.__ready === true', { timeout: 120000 });
 await page.evaluate(() => document.fonts.ready);
 if (stills) {

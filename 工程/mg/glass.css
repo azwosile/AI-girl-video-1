@@ -1,0 +1,38 @@
+/* 毛玻璃实验层：仅 html.glass-on 时生效（film.html?glass=1） */
+#aurora { position: absolute; inset: 0; overflow: hidden; pointer-events: none; mix-blend-mode: screen; }
+#aurora i { position: absolute; left: 0; top: 0; border-radius: 50%; will-change: transform; }
+
+/* 玻璃配方：backdrop blur + 5–12% 白 + 少量深色托底（保证文字对比）+ 1px 顶部高光 + 大圆角 */
+html.glass-on .stat,
+html.glass-on .panel,
+html.glass-on .toast,
+html.glass-on .news.dark,
+html.glass-on .term,
+html.glass-on .hf404,
+html.glass-on .gh {
+  /* v2「墨玻璃」：压暗背后内容（brightness .7）+ 深色托底，叠在白色网页截图上也保持文字对比 */
+  background: linear-gradient(135deg, rgba(255,255,255,.11), rgba(255,255,255,.02) 60%), rgba(8,11,20,var(--ink-a, .50));
+  -webkit-backdrop-filter: blur(28px) saturate(var(--frost-sat, 1.5)) brightness(.70);
+  backdrop-filter: blur(28px) saturate(var(--frost-sat, 1.5)) brightness(.70);
+  border: 1px solid rgba(255,255,255,.20);
+  border-radius: 20px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.42), inset 0 -1px 0 rgba(255,255,255,.06), inset 0 0 0 1px rgba(255,255,255,.05), 0 30px 80px rgba(0,0,0,.42);
+  overflow: hidden;
+  position: relative; /* 组件作为舞台元素时内联 absolute 会覆盖此值 */
+}
+html.glass-on .term .tbar { background: rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.10); }
+html.glass-on .browser .bbar { background: linear-gradient(rgba(255,255,255,.16), rgba(255,255,255,.06)), rgba(16,20,30,.55); -webkit-backdrop-filter: blur(22px) saturate(1.4); backdrop-filter: blur(22px) saturate(1.4); }
+html.glass-on .browser .url { background: rgba(0,0,0,.35); box-shadow: inset 0 0 0 1px rgba(255,255,255,.10); }
+
+/* 斜向反光：由 glass.js 按时间推进 --sheen，确定性 */
+html.glass-on .stat::after,
+html.glass-on .panel::after,
+html.glass-on .toast::after,
+html.glass-on .news.dark::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+  background: linear-gradient(115deg, transparent calc(var(--sheen, 0%) - 18%), rgba(255,255,255,var(--sheen-a, .16)) var(--sheen, 0%), transparent calc(var(--sheen, 0%) + 18%));
+  mix-blend-mode: screen;
+}
+/* 数据卡：角标改细，保留 HUD 识别度 */
+html.glass-on .stat b { border-width: 2px; opacity: .8; }
+html.glass-on .stat .sval { text-shadow: 0 2px 12px rgba(0,0,0,.55); }
