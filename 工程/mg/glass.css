@@ -1,16 +1,20 @@
-/* 毛玻璃实验层：仅 html.glass-on 时生效（film.html?glass=1） */
+/* 墨玻璃层 v2：.glass（按 GLASS_SCOPE 时间窗自动添加）或 html.glass-all（全片实验模式） */
 #aurora { position: absolute; inset: 0; overflow: hidden; pointer-events: none; mix-blend-mode: screen; }
 #aurora i { position: absolute; left: 0; top: 0; border-radius: 50%; will-change: transform; }
 
-/* 玻璃配方：backdrop blur + 5–12% 白 + 少量深色托底（保证文字对比）+ 1px 顶部高光 + 大圆角 */
-html.glass-on .stat,
-html.glass-on .panel,
-html.glass-on .toast,
-html.glass-on .news.dark,
-html.glass-on .term,
-html.glass-on .hf404,
-html.glass-on .gh {
-  /* v2「墨玻璃」：压暗背后内容（brightness .7）+ 深色托底，叠在白色网页截图上也保持文字对比 */
+/* 配方：背后内容压暗（brightness .7）+ 模糊 + 深色托底，叠在白色网页截图上也保持文字对比；1px 顶部高光 + 大圆角 */
+html.glass-all .stat,
+html.glass-all .panel,
+html.glass-all .toast,
+html.glass-all .news.dark,
+html.glass-all .hf404,
+html.glass-all .gh,
+.stat.glass,
+.panel.glass,
+.toast.glass,
+.news.dark.glass,
+.hf404.glass,
+.gh.glass {
   background: linear-gradient(135deg, rgba(255,255,255,.11), rgba(255,255,255,.02) 60%), rgba(8,11,20,var(--ink-a, .50));
   -webkit-backdrop-filter: blur(28px) saturate(var(--frost-sat, 1.5)) brightness(.70);
   backdrop-filter: blur(28px) saturate(var(--frost-sat, 1.5)) brightness(.70);
@@ -20,19 +24,31 @@ html.glass-on .gh {
   overflow: hidden;
   position: relative; /* 组件作为舞台元素时内联 absolute 会覆盖此值 */
 }
-html.glass-on .term .tbar { background: rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.10); }
-html.glass-on .browser .bbar { background: linear-gradient(rgba(255,255,255,.16), rgba(255,255,255,.06)), rgba(16,20,30,.55); -webkit-backdrop-filter: blur(22px) saturate(1.4); backdrop-filter: blur(22px) saturate(1.4); }
-html.glass-on .browser .url { background: rgba(0,0,0,.35); box-shadow: inset 0 0 0 1px rgba(255,255,255,.10); }
+html.glass-all .browser .bbar, .browser.glass-bar .bbar { background: linear-gradient(rgba(255,255,255,.16), rgba(255,255,255,.06)), rgba(16,20,30,.55); -webkit-backdrop-filter: blur(22px) saturate(1.4); backdrop-filter: blur(22px) saturate(1.4); }
+html.glass-all .browser .url, .browser.glass-bar .url { background: rgba(0,0,0,.35); box-shadow: inset 0 0 0 1px rgba(255,255,255,.10); }
 
-/* 斜向反光：由 glass.js 按时间推进 --sheen，确定性 */
-html.glass-on .stat::after,
-html.glass-on .panel::after,
-html.glass-on .toast::after,
-html.glass-on .news.dark::after {
+/* 斜向反光：glass.js 按时间推进 --sheen，确定性 */
+html.glass-all .stat::after,
+html.glass-all .panel::after,
+html.glass-all .toast::after,
+html.glass-all .news.dark::after,
+.stat.glass::after,
+.panel.glass::after,
+.toast.glass::after,
+.news.dark.glass::after {
   content: ''; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
   background: linear-gradient(115deg, transparent calc(var(--sheen, 0%) - 18%), rgba(255,255,255,var(--sheen-a, .16)) var(--sheen, 0%), transparent calc(var(--sheen, 0%) + 18%));
   mix-blend-mode: screen;
 }
-/* 数据卡：角标改细，保留 HUD 识别度 */
-html.glass-on .stat b { border-width: 2px; opacity: .8; }
-html.glass-on .stat .sval { text-shadow: 0 2px 12px rgba(0,0,0,.55); }
+html.glass-all .stat b, .stat.glass b { border-width: 2px; opacity: .8; }
+html.glass-all .stat .sval, .stat.glass .sval { text-shadow: 0 2px 12px rgba(0,0,0,.55); }
+
+/* ---------- 液态玻璃放大镜（S16） ---------- */
+.lens1017 { border-radius: 50%; box-shadow: 0 28px 60px rgba(0,0,0,.55), 0 0 0 1px rgba(0,0,0,.3), 0 0 50px rgba(110,140,255,.25); }
+.lens1017 .lclip { position: absolute; inset: 0; clip-path: circle(50% at 50% 50%); }
+.lens1017 .lfx { position: absolute; inset: 0; overflow: hidden; filter: url(#lensCA); background: radial-gradient(circle at 50% 42%, #1d2643, #0e1324 78%); }
+.lens1017 .lzc { position: absolute; left: 0; top: 0; transform-origin: 0 0; background: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; box-shadow: none !important; border-color: transparent !important; }
+.lens1017 .lzc::after { display: none; }
+.lens1017 .lrim { position: absolute; inset: 0; border-radius: 50%; pointer-events: none;
+  box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.55), inset 0 14px 26px rgba(255,255,255,.20), inset 0 -18px 30px rgba(0,0,0,.38), inset 0 0 44px rgba(140,170,255,.20);
+  background: radial-gradient(55% 34% at 33% 17%, rgba(255,255,255,.34), transparent 62%), radial-gradient(36% 20% at 68% 89%, rgba(255,255,255,.12), transparent 70%); }

@@ -156,6 +156,74 @@ body { font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'PingFang SC', sans-s
 .gpu { width: 560px; padding: 22px 28px; }
 .gpu .row { display: flex; align-items: center; gap: 12px; margin-top: 12px; font: 800 23px/1 'Microsoft YaHei', sans-serif; }
 .gpu .bar { height: 36px; border-radius: 6px; }
+/* ---- S16 · 1017 正式更新卡 ---- */
+.u1017 { padding: 26px 34px 22px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; }
+.u-head { display: flex; align-items: center; gap: 16px; }
+.u-chip { display: inline-flex; align-items: center; gap: 9px; background: #4d6bfe; color: #fff; font: 800 21px/1 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; padding: 9px 16px; border-radius: 99px; box-shadow: 0 0 24px rgba(77,107,254,.55); }
+.u-chip i { width: 9px; height: 9px; border-radius: 50%; background: #fff; box-shadow: 0 0 8px #fff; }
+.u-date { font: 800 23px/1 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; color: #ffd27a; letter-spacing: 1px; }
+.u-title { font: 900 46px/1.15 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; margin-top: 16px; color: #fff; letter-spacing: -.5px; }
+.u-sub { font: 600 21px/1.4 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; color: #aab4c8; margin-top: 6px; }
+.u-sub code { font-family: Consolas, 'Noto Sans Mono CJK SC', monospace; color: #9fb0ff; }
+.u-rows { margin-top: 16px; border-top: 1px solid rgba(255,255,255,.12); }
+.u-row { display: flex; align-items: center; height: 88px; border-bottom: 1px solid rgba(255,255,255,.08); }
+.u-nm { width: 320px; font: 800 27px/1.15 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; color: #e8ecf5; }
+.u-nm small { display: block; font-size: 16px; font-weight: 600; color: #8b95aa; margin-top: 5px; }
+.u-old { width: 80px; text-align: right; font: 700 24px/1 'Microsoft YaHei', sans-serif; color: #7d8598; text-decoration: line-through; opacity: 0; }
+.u-val { width: 170px; text-align: center; font: 900 60px/1 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; color: #7f889c; letter-spacing: -1px; font-variant-numeric: tabular-nums; }
+.u-val.new { color: #fff; text-shadow: 0 0 22px rgba(120,150,255,.65); }
+.u-tag { width: 76px; font: 800 16px/1 'Microsoft YaHei', sans-serif; color: #7d879b; }
+.u-tag.new { color: #9fb0ff; }
+.u-d { margin-left: auto; font: 900 25px/1 'Microsoft YaHei', sans-serif; color: #7ee7a8; background: rgba(60,200,120,.14); box-shadow: inset 0 0 0 1px rgba(126,231,168,.3); padding: 7px 13px; border-radius: 99px; opacity: 0; }
+.u-cmp { margin-top: 16px; display: flex; gap: 12px; align-items: center; font: 700 20px/1 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; color: #aab4c8; opacity: 0; }
+.u-cmp b { padding: 8px 13px; border-radius: 9px; background: rgba(255,255,255,.08); color: #dfe5f0; font-weight: 800; }
+.u-cmp b.me { background: rgba(77,107,254,.38); color: #fff; box-shadow: inset 0 0 0 1px rgba(160,180,255,.45); }
+.u-src { margin-top: 14px; font: 600 15px/1.3 'Microsoft YaHei', sans-serif; color: #77819a; }
+
+/* ---- v8 · S17–S21 品牌节拍 ---- */
+.clip { pointer-events: none; }
+.echo { font: 900 330px/1 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; color: var(--c); letter-spacing: -8px; white-space: nowrap; mix-blend-mode: screen; text-shadow: 0 0 80px var(--c); }
+.bglow { border-radius: 50%; mix-blend-mode: screen; pointer-events: none; }
+.btab { --c: #7c5cff; display: flex; align-items: center; gap: 12px; padding: 12px 22px 12px 18px; border-radius: 14px 14px 0 0; background: rgba(12,10,26,.82); border: 1px solid rgba(255,255,255,.16); border-bottom: 3px solid var(--c); font: 900 30px/1 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; color: #fff; white-space: nowrap; }
+.btab i { width: 12px; height: 12px; border-radius: 50%; background: var(--c); box-shadow: 0 0 12px var(--c); }
+.btab span { font-size: 18px; font-weight: 700; color: #c9c2ee; margin-left: 6px; }
+.bcard { width: 560px; padding: 30px 36px 26px; border-top: 4px solid var(--c); font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; }
+.bc-name { font: 900 96px/1 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; letter-spacing: -2px; background: linear-gradient(180deg, #fff 30%, var(--c)); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 18px color-mix(in srgb, var(--c) 60%, transparent)); }
+.bc-sub { margin-top: 10px; font: 800 30px/1.2 'Microsoft YaHei', sans-serif; color: #dcd6ff; }
+.bc-eta { display: inline-block; margin-top: 22px; padding: 8px 18px; border-radius: 99px; background: var(--c); color: #0d0b18; font: 900 28px/1.1 'Microsoft YaHei', sans-serif; transform-origin: 50% 0; }
+.bc-foot { margin-top: 18px; font: 600 18px/1.3 'Microsoft YaHei', sans-serif; color: #8f97ad; }
+.bcard.glm .bc-old { overflow: hidden; max-height: 90px; padding: 0 0 16px; margin-bottom: 16px; border-bottom: 1px dashed rgba(255,255,255,.18); font: 700 21px/1.45 'Microsoft YaHei', sans-serif; color: #c6ced8; }
+.bcard.glm .bc-old b { display: block; font-size: 16px; color: #ff8a8a; letter-spacing: 1px; }
+.bc-state { position: relative; height: 34px; margin-bottom: 10px; }
+.bc-state span { position: absolute; left: 0; top: 0; padding: 6px 14px; border-radius: 8px; font: 800 20px/1.1 'Microsoft YaHei', sans-serif; transform-origin: 50% 50%; }
+.bc-state .s0 { background: rgba(255,255,255,.1); color: #aab4c8; }
+.bc-state .s1 { background: var(--c); color: #071a17; opacity: 0; }
+.tl { height: 160px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; }
+.tl-line { position: absolute; left: 0; right: 0; top: 40px; height: 4px; background: rgba(255,255,255,.14); border-radius: 2px; }
+.tl-line i { position: absolute; left: 0; top: 0; bottom: 0; background: linear-gradient(90deg, #2a5bd7, #7a5af5 45%, rgba(170,170,190,.7) 70%, var(--c)); box-shadow: 0 0 14px rgba(142,197,255,.6); border-radius: 2px; }
+.tl-n { position: absolute; top: 0; width: 180px; margin-left: -90px; text-align: center; }
+.tl-n b { display: block; margin: 31px auto 0; width: 22px; height: 22px; border-radius: 50%; background: #2a5bd7; border: 3px solid #fff; }
+.tl-n .d { margin-top: 12px; font: 800 25px/1.1 Consolas, 'Microsoft YaHei', monospace; color: #dfe6f3; }
+.tl-n .e { margin-top: 6px; font: 700 22px/1.2 'Microsoft YaHei', sans-serif; color: #b6c0d4; }
+.tl-n.done:nth-child(4) b { background: #7a5af5; }
+.tl-n.quiet b { width: 14px; height: 14px; margin-top: 35px; background: #666a78; border: 2px solid #9aa0ae; }
+.tl-n.quiet .d, .tl-n.quiet .e { color: #8a90a0; }
+.tl-n.next b { width: 30px; height: 30px; margin-top: 27px; background: transparent; border: 3px dashed var(--c); box-shadow: 0 0 18px var(--c); }
+.tl-n.next .d { color: var(--c); font-family: 'Microsoft YaHei', sans-serif; }
+.tl-n.next .e { color: #fff; font-weight: 900; font-size: 27px; }
+.kopen { display: flex; align-items: center; gap: 16px; padding: 18px 30px; border-radius: 16px; border: 2px dashed var(--c); background: rgba(10,16,34,.72); font: 900 46px/1 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; color: #fff; white-space: nowrap; text-shadow: 0 0 18px rgba(142,197,255,.7); }
+.kopen .lk { width: 26px; height: 26px; border-radius: 50%; border: 3px solid var(--c); box-shadow: 0 0 12px var(--c), inset 0 0 8px var(--c); }
+.horizon { width: 1700px; height: 2px; background: linear-gradient(90deg, transparent, rgba(242,213,154,.85) 30%, rgba(255,240,210,1) 50%, rgba(242,213,154,.85) 70%, transparent); box-shadow: 0 0 24px rgba(255,210,140,.6); }
+.uend { padding: 26px 34px 22px; font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; }
+.uend .u-chip { background: linear-gradient(90deg, #4d6bfe, #c9a15a); }
+.uend .u-row { height: 76px; }
+.uend .u-val { font-size: 52px; }
+.u-sum { margin-top: 20px; display: flex; align-items: baseline; gap: 14px; }
+.u-sum b { font: 400 76px/1.1 'ZMX'; background: linear-gradient(180deg, #fff8e6 10%, #f2d59a 55%, #c98f45 100%); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 16px rgba(255,190,110,.45)); }
+.u-sum small { font: 700 17px/1 'Microsoft YaHei', sans-serif; color: #c9a15a; border: 1px solid rgba(201,161,90,.6); padding: 4px 8px; border-radius: 6px; }
+/* v8 · S15 剪影卡：未官宣 = 剪影 */
+.card .f img.sil { top: 4px; height: 440px; }
+.card .f.silf { background: radial-gradient(70% 55% at 50% 38%, color-mix(in srgb, var(--c) 32%, #1a2034), #0c0f18 75%); }
 </style></head>
 <body>
 <div id="world">
@@ -170,8 +238,10 @@ body { font-family: 'Microsoft YaHei', 'Noto Sans CJK SC', 'PingFang SC', sans-s
   <div id="black"></div>
 </div>
 <script src="lib.js"></script>
+<script src="fx.js"></script><!-- 局部强调特效（漏光 / 局部曝光 / 局部惯性 / 扫描 / 反光 / 横纵移），替代同质的全屏白闪与震屏 -->
 <script src="shots.js"></script>
-<script src="glass.js"></script><!-- 毛玻璃实验层：仅 ?glass=1 时启用 -->
+<script src="shots_tail.js"></script><!-- 70.4s 之后的接续镜头（S16–） -->
+<script src="glass.js"></script><!-- 墨玻璃：默认按 GLASS_SCOPE；?glass=0 关闭 / ?glass=all 全片 -->
 <script>
   window.DEMO = { width: 1920, height: 1080, fps: 30 };
   Promise.all([...document.images].map(i => i.complete ? 1 : new Promise(r => { i.onload = i.onerror = r; })))

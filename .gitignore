@@ -28,3 +28,13 @@ desktop.ini
 .DS_Store
 .vscode/
 *.tmp
+
+# —— 派生帧 / 本地备份 / 渲染中间件（可由 素材/AI镜头 与脚本重新生成）——
+工程/mg/assets/clips/
+工程/mg/_bak_v*/
+工程/mg/assets/chars/_sil_v*/
+工程/ae/render/
+工程/ae/stills/
+工程/ae/*日志/
+# FlashVSR 超分成片可以上传（clips 帧由它们重新抽取）
+!素材/AI镜头/超分测试/*.mp4

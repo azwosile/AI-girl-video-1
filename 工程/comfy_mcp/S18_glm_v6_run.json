@@ -1,0 +1,81 @@
+{
+  "shot": "S18_glm",
+  "revision": "v6",
+  "endpoint": "http://127.0.0.1:8188",
+  "client_id": "arena-S18_glm-v6-585ec92d-aeb6-4d91-8144-f4f165d0fa21",
+  "prompt_id": "b086333a-accc-42b6-b4d3-4681a3c8aafb",
+  "state": "verified_file",
+  "submitted_at_local": "2026-10-17T21:13:02+0800",
+  "frame_name": "S18_glm_v6_first_864x480.png",
+  "workflow_sha256": "b1f913e1b8ef6cd61eeda07c5f7fdf82bc469332489ef13a373e87b3cd49b13b",
+  "frame_sha256": "2b0cb2922946beffcda48c04cd9d0b3486874c3076d5524ee6ee852e816b322b",
+  "queue_before": {
+    "queue_running": 1,
+    "queue_pending": 0
+  },
+  "queue_number": 2,
+  "node_errors": {},
+  "history_status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "b086333a-accc-42b6-b4d3-4681a3c8aafb",
+          "timestamp": 1792243729132
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "109",
+            "106",
+            "108",
+            "115"
+          ],
+          "prompt_id": "b086333a-accc-42b6-b4d3-4681a3c8aafb",
+          "timestamp": 1792243729172
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "b086333a-accc-42b6-b4d3-4681a3c8aafb",
+          "timestamp": 1792244631927
+        }
+      ]
+    ]
+  },
+  "saved_path": "D:\\DeepSeek Harness WorkSpace\\国模 江湖之间\\素材\\AI镜头\\S18_GLM_v6_FL2VA.mp4",
+  "source_output": {
+    "node": "122",
+    "filename": "arena_S18_glm_v6_FL2VA_00001.mp4",
+    "subfolder": "MiniMaxH3",
+    "type": "output",
+    "format": "video/h264-mp4",
+    "frame_rate": 24.0,
+    "workflow": "arena_S18_glm_v6_FL2VA_00001.png",
+    "fullpath": "E:\\AI\\Work-Fisher纯净包2026.8.7\\ComfyUI\\output\\MiniMaxH3\\arena_S18_glm_v6_FL2VA_00001.mp4"
+  },
+  "bytes": 322428,
+  "sha256": "e320e80bbb7e7c156e2f3c7fe31d425a396cf8ff2c194671b03e88f23a0b421d",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 864,
+        "height": 480,
+        "r_frame_rate": "24/1"
+      }
+    ],
+    "format": {
+      "duration": "3.041667",
+      "size": "322428"
+    }
+  }
+}

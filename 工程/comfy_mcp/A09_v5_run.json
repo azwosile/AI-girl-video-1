@@ -1,0 +1,76 @@
+{
+  "shot": "A09",
+  "revision": "v5",
+  "endpoint": "http://127.0.0.1:8188",
+  "client_id": "arena-a09-v5-1f3883e9-1893-4b4a-b986-ccd381037260",
+  "prompt_id": "95599dd9-6023-429c-9894-5c634b0b2da9",
+  "state": "verified_file",
+  "submitted_at_local": "2026-10-17T20:34:24+0800",
+  "frame_name": "A09_v5_firstframe_864x480.png",
+  "workflow_sha256": "bc51b23c7810059a0b64540d13d2f758023ebfa50324b488dcf1442957b7ebd5",
+  "frame_sha256": "bfb8380e1f54e24e788e799df9ee1b33d2c9b43530db250295f5e189be224b21",
+  "queue_before": {
+    "queue_running": 0,
+    "queue_pending": 0
+  },
+  "queue_number": 0,
+  "node_errors": {},
+  "history_status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "95599dd9-6023-429c-9894-5c634b0b2da9",
+          "timestamp": 1792240464936
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "95599dd9-6023-429c-9894-5c634b0b2da9",
+          "timestamp": 1792240464978
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "95599dd9-6023-429c-9894-5c634b0b2da9",
+          "timestamp": 1792241412444
+        }
+      ]
+    ]
+  },
+  "saved_path": "D:\\DeepSeek Harness WorkSpace\\国模 江湖之间\\素材\\AI镜头\\A09_DeepSeek_v5_FL2VA.mp4",
+  "source_output": {
+    "node": "122",
+    "filename": "arena_A09_v5_FL2VA_00001.mp4",
+    "subfolder": "MiniMaxH3",
+    "type": "output",
+    "format": "video/h264-mp4",
+    "frame_rate": 24.0,
+    "workflow": "arena_A09_v5_FL2VA_00001.png",
+    "fullpath": "E:\\AI\\Work-Fisher纯净包2026.8.7\\ComfyUI\\output\\MiniMaxH3\\arena_A09_v5_FL2VA_00001.mp4"
+  },
+  "bytes": 307114,
+  "sha256": "e2ba411dbbf838d768c3713bbf75bd62e15654a566195466cf1bd00c4e41650c",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 864,
+        "height": 480,
+        "r_frame_rate": "24/1"
+      }
+    ],
+    "format": {
+      "duration": "3.041667",
+      "size": "307114"
+    }
+  }
+}

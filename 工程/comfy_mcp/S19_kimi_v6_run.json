@@ -1,0 +1,81 @@
+{
+  "shot": "S19_kimi",
+  "revision": "v6",
+  "endpoint": "http://127.0.0.1:8188",
+  "client_id": "arena-S19_kimi-v6-c873e8c6-aa1f-4dc2-8ab5-60136a02757d",
+  "prompt_id": "9159132b-6634-4f03-a3c6-865e38be5f18",
+  "state": "verified_file",
+  "submitted_at_local": "2026-10-17T21:13:02+0800",
+  "frame_name": "S19_kimi_v6_first_864x480.png",
+  "workflow_sha256": "1077b49e34284d27bcc9d42862dd27dea7afb7562816c1f3ef13f65d87ff40c5",
+  "frame_sha256": "114c3b33b8d0314bcfa2ec691e4aaa0fd9f7cf9f5a56ca1f6c4cb42ac70f9e72",
+  "queue_before": {
+    "queue_running": 1,
+    "queue_pending": 1
+  },
+  "queue_number": 3,
+  "node_errors": {},
+  "history_status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "9159132b-6634-4f03-a3c6-865e38be5f18",
+          "timestamp": 1792244638101
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "109",
+            "106",
+            "108",
+            "115"
+          ],
+          "prompt_id": "9159132b-6634-4f03-a3c6-865e38be5f18",
+          "timestamp": 1792244638164
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "9159132b-6634-4f03-a3c6-865e38be5f18",
+          "timestamp": 1792245619829
+        }
+      ]
+    ]
+  },
+  "saved_path": "D:\\DeepSeek Harness WorkSpace\\国模 江湖之间\\素材\\AI镜头\\S19_Kimi_v6_FL2VA.mp4",
+  "source_output": {
+    "node": "122",
+    "filename": "arena_S19_kimi_v6_FL2VA_00001.mp4",
+    "subfolder": "MiniMaxH3",
+    "type": "output",
+    "format": "video/h264-mp4",
+    "frame_rate": 24.0,
+    "workflow": "arena_S19_kimi_v6_FL2VA_00001.png",
+    "fullpath": "E:\\AI\\Work-Fisher纯净包2026.8.7\\ComfyUI\\output\\MiniMaxH3\\arena_S19_kimi_v6_FL2VA_00001.mp4"
+  },
+  "bytes": 396634,
+  "sha256": "79a6a2bf1c2af8c540cf0c6025530f798ff1ffb38ac6156518bdb6d3f9293a83",
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 864,
+        "height": 480,
+        "r_frame_rate": "24/1"
+      }
+    ],
+    "format": {
+      "duration": "3.750000",
+      "size": "396634"
+    }
+  }
+}

@@ -1,0 +1,255 @@
+{
+ "104": {
+  "class_type": "BasicGuider",
+  "inputs": {
+   "model": [
+    "115",
+    0
+   ],
+   "conditioning": [
+    "113",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "BasicGuider"
+  }
+ },
+ "105": {
+  "class_type": "RandomNoise",
+  "inputs": {
+   "noise_seed": 20261017
+  },
+  "_meta": {
+   "title": "RandomNoise"
+  }
+ },
+ "110": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+  },
+  "_meta": {
+   "title": "VAELoader"
+  }
+ },
+ "111": {
+  "class_type": "KSamplerSelect",
+  "inputs": {
+   "sampler_name": "euler"
+  },
+  "_meta": {
+   "title": "KSamplerSelect"
+  }
+ },
+ "112": {
+  "class_type": "BasicScheduler",
+  "inputs": {
+   "model": [
+    "115",
+    0
+   ],
+   "scheduler": "beta",
+   "steps": 10,
+   "denoise": 1
+  },
+  "_meta": {
+   "title": "BasicScheduler"
+  }
+ },
+ "119": {
+  "class_type": "SamplerCustomAdvanced",
+  "inputs": {
+   "noise": [
+    "105",
+    0
+   ],
+   "guider": [
+    "104",
+    0
+   ],
+   "sampler": [
+    "111",
+    0
+   ],
+   "sigmas": [
+    "112",
+    0
+   ],
+   "latent_image": [
+    "113",
+    1
+   ]
+  },
+  "_meta": {
+   "title": "SamplerCustomAdvanced"
+  }
+ },
+ "120": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "119",
+    0
+   ],
+   "vae": [
+    "109",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "VAEDecode"
+  }
+ },
+ "121": {
+  "class_type": "VAEDecodeAudio",
+  "inputs": {
+   "samples": [
+    "119",
+    0
+   ],
+   "vae": [
+    "110",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "VAEDecodeAudio"
+  }
+ },
+ "109": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+  },
+  "_meta": {
+   "title": "VAELoader"
+  }
+ },
+ "106": {
+  "class_type": "CLIPLoader",
+  "inputs": {
+   "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+   "type": "minimax",
+   "device": "default"
+  },
+  "_meta": {
+   "title": "CLIPLoader"
+  }
+ },
+ "102": {
+  "class_type": "ReservedVRAMSetter",
+  "inputs": {
+   "reserved": 3,
+   "mode": "manual",
+   "seed": 1062199812465045,
+   "auto_max_reserved": 0,
+   "clean_gpu_before": true,
+   "anything": [
+    "108",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "ReservedVRAMSetter"
+  }
+ },
+ "113": {
+  "class_type": "MiniMaxH3ImageToVideo",
+  "inputs": {
+   "clip": [
+    "106",
+    0
+   ],
+   "vae": [
+    "109",
+    0
+   ],
+   "prompt": [
+    "118",
+    0
+   ],
+   "width": 864,
+   "height": 480,
+   "length": 73,
+   "first_frame": [
+    "123",
+    0
+   ],
+   "last_frame": [
+    "124",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "MiniMaxH3ImageToVideo"
+  }
+ },
+ "123": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "A09_Flash1017_v4_firstframe.png"
+  },
+  "_meta": {
+   "title": "LoadImage"
+  }
+ },
+ "108": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "minimax_h3_fl2va_int8_convrot.safetensors",
+   "weight_dtype": "default"
+  },
+  "_meta": {
+   "title": "UNETLoader"
+  }
+ },
+ "115": {
+  "class_type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+  "inputs": {
+   "model": [
+    "102",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "MiniMaxH3MemoryEfficientSageAttentionPatch"
+  }
+ },
+ "122": {
+  "class_type": "VHS_VideoCombine",
+  "inputs": {
+   "images": [
+    "120",
+    0
+   ],
+   "frame_rate": 24,
+   "loop_count": 0,
+   "filename_prefix": "MiniMaxH3/arena_A09_v5_FL2VA",
+   "format": "video/h264-mp4",
+   "pingpong": false,
+   "save_output": true
+  },
+  "_meta": {
+   "title": "VHS_VideoCombine"
+  }
+ },
+ "118": {
+  "class_type": "PrimitiveStringMultiline",
+  "inputs": {
+   "value": "How the reference pictures align with the target video — Picture 1 (from Shot 1) aligns with the 0.00-second mark of the target video; Picture 2 (from Shot 1) aligns with the 3.00-second mark of the target video.\n\nintegrated_multimodal_description: [Shot 1] Clean cel-shaded anime illustration with soft cinematic lighting, a locked-off medium shot. The left half of the frame is empty, out-of-focus ink-blue aurora mist with soft cobalt bokeh and a faint warm gold haze low on the left; the right third holds a young woman with long wavy blue hair, blue whale-fin ears, a white frilled maid headdress and a navy and white maid dress, framed from the head to the hips, hands clasped in front. Her face, hair color, ear shape, outfit and placement stay exactly as in Picture 1 throughout. From 0.00 to about 1.10 seconds she holds still with a downcast, teary gaze; only the ends of her hair drift very slowly, as if suspended in calm water, and a few dust motes float in the cool light. Around 1.20 seconds a soft cobalt-blue light from off-screen left gently swells across the left side of her face and hair, with a thin gold shimmer sliding across her cheek. Between 1.20 and 1.90 seconds she lifts her chin slightly and raises her eyes toward the off-screen left, as if catching sight of something bright; her eyes widen a little and catch tiny cobalt and gold highlights, and her whale-fin ears perk up slightly. From 1.90 seconds her expression settles into a small, soft, closed-mouth hopeful smile, she blinks once, and she holds that look until the end, matching Picture 2. The blue-white rim light on her right edge stays steady. The camera does not move or reframe; the background mist drifts only very slowly. One continuous restrained shot, no speech, no lip movement, no hand gesture, no new props, no other characters, no readable text, no logos, no screens or monitors.\n\noverall_soundscape: N/A. Silent reaction shot, no dialogue or vocalization.\n\nnon_diegetic_music: N/A\n"
+  },
+  "_meta": {
+   "title": "Input Text (Prompt)"
+  }
+ },
+ "124": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "A09_v5_lastframe_864x480.png"
+  },
+  "_meta": {
+   "title": "last frame"
+  }
+ }
+}

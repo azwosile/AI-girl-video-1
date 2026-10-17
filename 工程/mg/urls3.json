@@ -1,0 +1,6 @@
+[
+ {"id":"qwen_drops","url":"https://www.qianwenai.com/drops/qwen-0922","maxh":3000},
+ {"id":"qwen38_next_hf","url":"https://huggingface.co/Maximilian228/Qwen3.8-Flash-Next-NVFP4-GPTQ-Strata","maxh":2600},
+ {"id":"glm55_jpm","url":"https://finance.sina.com.cn/tech/discovery/2026-06-22/doc-inieiatn2387772.shtml","maxh":3000},
+ {"id":"kimi_k31_md","url":"https://news.mydrivers.com/1/1156/1156574.htm","maxh":3000}
+]
